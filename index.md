@@ -10,7 +10,7 @@ How are Wikidata items structured?  In this diagram, you can see the structure o
 ```SUBJECT - PREDICATE - OBJECT``` (e.g. Douglas Adams is educated at the St John’s College). In Wikidata the subject is referred to an item and the predicate is referred to as property. Each property has a value, which can be again an item, text, number, date, or GPS coordinates among others. Each value can have additional qualifiers which have additional information with other property-value pairs such as start time. This structure will be important when you start to express queries with SPARQL.
 
 ![This is an image](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Datamodel_in_Wikidata.svg/1280px-Datamodel_in_Wikidata.svg.png)
-Wikidata datamodel (Wikicommons)
+Figure 1: Wikidata datamodel (Wikicommons)
 
 ## Introduction to SPARQL
 
@@ -29,4 +29,7 @@ GROUP BY ?topLabel
 ORDER BY desc(?count)
 ``` 
 
+The SPARQL endpoint in Wikibase (open source software behind Wikidata) comes along with several visualisations. The above query can be visualised for example in a BubbleChart: 
 
+![This is an image](https://www.mimotext.uni-trier.de/application/files/7216/4820/6455/query1_overview_publication_places.png)
+Figure 2: Overview of the places of publication.
