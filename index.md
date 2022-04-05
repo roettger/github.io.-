@@ -33,3 +33,6 @@ The SPARQL endpoint in Wikibase (open source software behind Wikidata) comes alo
 
 ![This is an image](https://www.mimotext.uni-trier.de/application/files/7216/4820/6455/query1_overview_publication_places.png)
 Figure 2: Overview of the places of publication.
+
+
+You can try this query [here](http://zora.uni-trier.de:11100/#).
