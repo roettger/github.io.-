@@ -59,3 +59,11 @@ SELECT ?item ?itemLabel ?linkTo {
 ```
 
 You can try this query [here](https://angryloki.github.io/wikidata-graph-builder/?property=P737&item=Q9068&iterations=2&mode=reverse).
+
+Read on: 
+
+[Wikidata:Introduction](https://www.wikidata.org/wiki/Wikidata:Introduction)
+[Wikidata:SPARQL queries](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries)
+[Wikidata:SPARQL queries examples](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples)
+[Wikidata:Creating a bot](https://www.wikidata.org/wiki/Wikidata:Creating_a_bot)
+
