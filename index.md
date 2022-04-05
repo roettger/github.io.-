@@ -16,7 +16,7 @@ Figure 1: Wikidata datamodel (Wikicommons)
 
 SPARQL is the acronym of _SPARQL Protocol And RDF Query Language_ and it is used to query data stored as RDF (Resource Description Framework) and it is standardized by the W3C.
 
-Starting with the `SELECT` clause, you define the variables you want to get (variables are prefixed with a question mark). Inside the ` WHERE` clause, you set restrictions which mostly take the form of the triples you have seen previously. The statement `?item wdt:P8 ?top.` collects all items which have the property publication place `(P8)`  into the variable `?top`. 
+Starting with the `SELECT` clause, you define the variables you want to get (variables are prefixed with a question mark). Inside the `WHERE` clause, you set restrictions which mostly take the form of the triples you have seen previously. The statement `?item wdt:P8 ?top.` collects all items which have the property publication place `(P8)`  into the variable `?top`. 
 
 ```
 SELECT ?topLabel (count(*) as ?count)
