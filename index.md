@@ -36,3 +36,26 @@ Figure 2: Overview of the places of publication.
 
 
 You can try this query [here](https://tinyurl.com/y9w4wzkr).
+
+Let's get back to our initial question: Who was influenced by writer Voltaire? We can use the [Wikidata Graph Builder](https://angryloki.github.io/wikidata-graph-builder) to answer that question, Voltaire being our `root item`, `influenced by` being our transversal property in mode `reverse` and using 2 iterations. The query can be exported to "Wikidata Query Service" as well: 
+
+```
+PREFIX gas: <http://www.bigdata.com/rdf/gas#>
+
+SELECT ?item ?itemLabel ?linkTo {
+  SERVICE gas:service {
+    gas:program gas:gasClass "com.bigdata.rdf.graph.analytics.SSSP" ;
+                gas:in wd:Q9068 ;
+                gas:traversalDirection "Reverse" ;
+                gas:out ?item ;
+                gas:out1 ?depth ;
+                gas:maxIterations 2 ;
+                gas:linkType wdt:P737 .
+  }
+  OPTIONAL { ?item wdt:P737 ?linkTo }
+  SERVICE wikibase:label {bd:serviceParam wikibase:language "en" }
+}
+
+```
+
+You can try this query [here](https://angryloki.github.io/wikidata-graph-builder/?property=P737&item=Q9068&iterations=2&mode=reverse).
