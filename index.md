@@ -35,4 +35,4 @@ The SPARQL endpoint in Wikibase (open source software behind Wikidata) comes alo
 Figure 2: Overview of the places of publication.
 
 
-You can try this query [here](http://zora.uni-trier.de:11100/#).
+You can try this query [here](https://tinyurl.com/y9w4wzkr).
