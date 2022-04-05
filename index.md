@@ -62,8 +62,8 @@ You can try this query [here](https://angryloki.github.io/wikidata-graph-builder
 
 Read on: 
 
-[Wikidata:Introduction](https://www.wikidata.org/wiki/Wikidata:Introduction)
-[Wikidata:SPARQL queries](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries)
-[Wikidata:SPARQL queries examples](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples)
-[Wikidata:Creating a bot](https://www.wikidata.org/wiki/Wikidata:Creating_a_bot)
+- [Wikidata:Introduction](https://www.wikidata.org/wiki/Wikidata:Introduction)
+- [Wikidata:SPARQL queries](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries)
+- [Wikidata:SPARQL queries examples](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples)
+- [Wikidata:Creating a bot](https://www.wikidata.org/wiki/Wikidata:Creating_a_bot)
 
