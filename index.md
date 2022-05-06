@@ -60,6 +60,30 @@ SELECT ?item ?itemLabel ?linkTo {
 
 You can try this query [here](https://angryloki.github.io/wikidata-graph-builder/?property=P737&item=Q9068&iterations=2&mode=reverse).
 
+But, wait - Russian propagandist Aleksandr Dugin is influenced by Voltaire?? What is the origin of this statement? In Reasoning with Knowledge Graphs, there is a thing called inferences. 
+
+If A is influenced by B and B is influenced by C, then we can infer that A is influenced by C, which can lead to quite absurd statements if one increases the iterations. 
+
+So, we rather decrease the iterations back to 1 iteration. 
+
+```
+PREFIX gas: <http://www.bigdata.com/rdf/gas#>
+
+SELECT ?item ?itemLabel ?linkTo {
+  SERVICE gas:service {
+    gas:program gas:gasClass "com.bigdata.rdf.graph.analytics.SSSP" ;
+                gas:in wd:Q9068 ;
+                gas:traversalDirection "Reverse" ;
+                gas:out ?item ;
+                gas:out1 ?depth ;
+                gas:maxIterations 1 ;
+                gas:linkType wdt:P737 .
+  }
+  OPTIONAL { ?item wdt:P737 ?linkTo }
+  SERVICE wikibase:label {bd:serviceParam wikibase:language "en" }
+}
+```
+You can try this query [here](https://angryloki.github.io/wikidata-graph-builder/?property=P737&item=Q9068&iterations=1&mode=reverse).
 
 Read on: 
 
