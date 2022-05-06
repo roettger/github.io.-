@@ -85,6 +85,8 @@ SELECT ?item ?itemLabel ?linkTo {
 ```
 You can try this query [here](https://angryloki.github.io/wikidata-graph-builder/?property=P737&item=Q9068&iterations=1&mode=reverse).
 
+So we keep in mind, that the inferences should be succept to critical inquiry. 
+
 Read on: 
 
 - [Wikidata:Introduction](https://www.wikidata.org/wiki/Wikidata:Introduction)
