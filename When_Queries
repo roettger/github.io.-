@@ -7,7 +7,7 @@ These queries retrieve first publication dates of the french enlightenment novel
 Let’s start with a simple example: The following query shows the first publication date (P7) of all the novels in the corpus.
 
 '''Query to retrieve the first publication dates of all French novels 1750-1800'''
-
+```
   SELECT ?item ?itemLabel ?value ?valueLabel 
   WHERE{
      ?item wdt:P7 #publication date 
@@ -15,7 +15,7 @@ Let’s start with a simple example: The following query shows the first publica
   
      SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
    } 
-
+ ```
    https://tinyurl.com/y2h2yh4j
 
 Follow the TinyURL and let the query run by clicking on the "play"-Button. Above the table, you can click on the arrow next to the eye. In the drop-down menu that pops up, you can choose “timeline” from the menu in order to display the results on a timeline. Another way to display the results in the timeline view is to specify it in the query itself. You can simply insert ''#defaultView:Timeline'' on the beginning of your SPARQL query. You could also specify other visualizations, for example a ''#defaultView:BarChart'' (see example below). 
@@ -23,7 +23,7 @@ Follow the TinyURL and let the query run by clicking on the "play"-Button. Above
 We can also combine information on first publications dates and a certain topic. Let's see how the thematic concept "travel" evolved over time: 
 
 '''Query to retrieve the theme 'travel' over time in French novels 1750-1800'''
-
+```
    #defaultView:BarChart
    SELECT ?date ?countTravel ?countAll (?countTravel / ?countAll AS ?rel)
    WHERE {
@@ -49,13 +49,14 @@ We can also combine information on first publications dates and a certain topic.
    GROUP BY ?date
  }
  }
+ ```
 
  https://tinyurl.com/y6r5qf69
 
 We could also have a look at all the themes in the corpus and their evolution over time, filtering out themes with no or only one occurence per year (?countyear > 1).
 
 '''Query to retrieve all themes in French novels 1750-1800'''
-
+```
   #defaultView:BarChart
   Select  (str(SAMPLE(year(?date))) as ?year) (count(?themelabel) as ?count) ?themelabel 
    WHERE{
@@ -68,5 +69,5 @@ We could also have a look at all the themes in the corpus and their evolution ov
   }
   GROUP BY ?themelabel ?year ?count
   #having (?count> 1)
-  
+  ```
   https://tinyurl.com/y3kmqhpd
