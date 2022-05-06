@@ -60,6 +60,8 @@ SELECT ?item ?itemLabel ?linkTo {
 
 You can try this query [here](https://angryloki.github.io/wikidata-graph-builder/?property=P737&item=Q9068&iterations=2&mode=reverse).
 
+
+<iframe style="width: 80vw; height: 50vh; border: none;" src="./embed.html#%23defaultView%3ABarChart%0ASelect%20%20(str(SAMPLE(year(%3Fdate)))%20as%20%3Fyear)%20(count(%3Fthemelabel)%20as%20%3Fcount)%20%3Fthemelabel%20%0A%20%20%20WHERE%7B%0A%20%20%20%3Fitem%20wdt%3AP25%20%3Ftheme.%0A%20%20%20%3Ftheme%20rdfs%3Alabel%20%3Fthemelabel%20.%0A%20%20%20%3Fitem%20wdt%3AP7%20%3Fdate%20.%0A%20%20%20FILTER(lang(%3Fthemelabel)%20%3D%20%22fr%22)%0A%20%20%20BIND(str(year(%3Fdate))%20as%20%3Fyear)%0A%20%20%20SERVICE%20wikibase%3Alabel%20%7Bbd%3AserviceParam%20wikibase%3Alanguage%20%22%7BAUTO_LANGUAGE%7D%22%2C%22fr%22%20.%7D%0A%20%20%7D%0A%0AGROUP%20BY%20%3Fthemelabel%20%3Fyear%20%3Fcount%0A%23having%20(%3Fcount%3E%201)%0A%23ORDER%20BY%20asc(%3Fyear)%20desc(%3Fcountyear)%0A%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
 Read on: 
 
 - [Wikidata:Introduction](https://www.wikidata.org/wiki/Wikidata:Introduction)
