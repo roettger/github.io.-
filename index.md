@@ -1,6 +1,6 @@
 # Querying a Knowlege Graph with SPARQL
 
-### Imagine you wanted a list of people influenced by French writer and philosopher Voltaire. What would have been a tedious research is possible within a simple query on Wikidata with SPARQL.
+### Imagine you wanted a list of people influenced by French writer and philosopher Voltaire. What would have been a laborious research is possible within a simple query on Wikidata with SPARQL.
 
 Wikidata is a free and collaborative Linked Open Data (LOD) knowledge base which is human and machine readible. The project started 2012 by the Wikimedia Foundation as an attempt to centralize and to structure human knowledge available in the online encyclopedia Wikipedia in an datafied form as RDF triples. 
 
